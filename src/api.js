@@ -1,7 +1,7 @@
 
 
 export const getAttendeePhotoAlbum = async (eventId, userId) => {
-    console.log('@@@ eventId, userId', eventId, userId);
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+    const url = `https://8ehxwo1lmi.execute-api.us-east-1.amazonaws.com/alpha/events/${eventId}/attendees/${userId}`;
+    const response = await fetch(url);
     return response.json();
 };
