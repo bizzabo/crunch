@@ -43,12 +43,14 @@ h2 {
   margin-top: 30px;
 }
 
+
 .share-button{
   width: 100px;
   position: absolute;
   top: -22px;
   right: 68px;
 }
+
 
 section.gallery {
   margin-left: 15%;
@@ -61,6 +63,7 @@ section.gallery {
   height: 250px;
   margin: 3px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 section {
@@ -107,4 +110,26 @@ button {
   height: 30px;
   border-radius: 20px;
   outline: none;
+}
+
+@media (max-width: 768px) {
+  .share-button {
+    top: 92px;
+    right: 34%;
+  }
+
+  h2 {
+    margin-bottom: 70px;
+  }
+
+  section.sponsors h2, section.next-event h2 {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 75%;
+    height: 50px;
+  }
 }

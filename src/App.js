@@ -4,13 +4,20 @@ import { getAttendeePhotoAlbum } from "./api";
 const Sound = require('react-sound').default;
 
 
-const sounds = ['https://s3.amazonaws.com/bizzathon-2018-audio/1.mp3',
-    'https://s3.amazonaws.com/bizzathon-2018-audio/2.mp3', 'https://s3.amazonaws.com/bizzathon-2018-audio/3.mp3', 'https://s3.amazonaws.com/bizzathon-2018-audio/4.mp3'];
+const sounds = ['https://s3.amazonaws.com/bizzathon-2018-audio/1.mp3', 'https://s3.amazonaws.com/bizzathon-2018-audio/2.mp3', 'https://s3.amazonaws.com/bizzathon-2018-audio/3.mp3', 'https://s3.amazonaws.com/bizzathon-2018-audio/4.mp3'];
+const getSound = () => {
+  const n = Math.random();
+  if (n < 0.25) return sounds[0];
+  if (n < 0.5) return sounds[1];
+  if (n < 0.75) return sounds[2];
+  return sounds[3];
+};
 
 class App extends Component {
 
     state = {
-        sound: Sound.status.STOPPED
+        soundStatus: Sound.status.STOPPED,
+        selectedSound: getSound()
     };
 
     async componentDidMount() {
@@ -23,13 +30,13 @@ class App extends Component {
             attendeeName: `${response.attendee.firstName} ${response.attendee.lastName}`,
             profileImageSrc: response.attendee.thumbnailUrl
         });
-
-
     }
 
     playSound = () => {
-        console.log('@@@ aaa');
-        this.setState({sound: Sound.status.PLAYING});
+        this.setState({
+            soundStatus: Sound.status.PLAYING,
+            selectedSound: getSound()
+        });
     };
 
     render() {
@@ -40,7 +47,7 @@ class App extends Component {
         } = this.state;
         return (
           <div className="App">
-            <header className="purple-section">
+            <header>
                 <img src={profileImageSrc} alt="Barak Mazal Tov!" />
                 <h1>
                     HI {attendeeName},
@@ -73,7 +80,7 @@ class App extends Component {
                 <h2>USE PHOTOVENT FREE FOR YOUR NEXT EVENT</h2>
                 <button>TRY NOW</button>
             </section>
-            <Sound url={sounds[0]} playStatus={this.state.sound} />
+            <Sound url={this.state.selectedSound} playStatus={this.state.soundStatus} />
           </div>
         );
     }
