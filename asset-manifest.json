@@ -1,14 +1,14 @@
 {
-  "main.css": "/crunch/static/css/main.1526c41e.chunk.css",
-  "main.js": "/crunch/static/js/main.07513711.chunk.js",
-  "main.js.map": "/crunch/static/js/main.07513711.chunk.js.map",
-  "static/js/1.3d1e286f.chunk.js": "/crunch/static/js/1.3d1e286f.chunk.js",
-  "static/js/1.3d1e286f.chunk.js.map": "/crunch/static/js/1.3d1e286f.chunk.js.map",
+  "main.css": "/crunch/static/css/main.39b924cb.chunk.css",
+  "main.js": "/crunch/static/js/main.b25cb5a9.chunk.js",
+  "main.js.map": "/crunch/static/js/main.b25cb5a9.chunk.js.map",
+  "static/js/1.bade843e.chunk.js": "/crunch/static/js/1.bade843e.chunk.js",
+  "static/js/1.bade843e.chunk.js.map": "/crunch/static/js/1.bade843e.chunk.js.map",
   "runtime~main.js": "/crunch/static/js/runtime~main.b1d1fb52.js",
   "runtime~main.js.map": "/crunch/static/js/runtime~main.b1d1fb52.js.map",
   "static/media/App.css": "/crunch/static/media/back.3dd97e2e.jpg",
-  "static/css/main.1526c41e.chunk.css.map": "/crunch/static/css/main.1526c41e.chunk.css.map",
+  "static/css/main.39b924cb.chunk.css.map": "/crunch/static/css/main.39b924cb.chunk.css.map",
   "index.html": "/crunch/index.html",
-  "precache-manifest.a885df3fa2a58b902ee82a74cdaa8a72.js": "/crunch/precache-manifest.a885df3fa2a58b902ee82a74cdaa8a72.js",
+  "precache-manifest.2cfb7d8d293bb543c4e48af8b245e6bb.js": "/crunch/precache-manifest.2cfb7d8d293bb543c4e48af8b245e6bb.js",
   "service-worker.js": "/crunch/service-worker.js"
 }
