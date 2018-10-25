@@ -1,14 +1,14 @@
 {
-  "main.css": "/crunch/static/css/main.eb05c64c.chunk.css",
-  "main.js": "/crunch/static/js/main.4cb63284.chunk.js",
-  "main.js.map": "/crunch/static/js/main.4cb63284.chunk.js.map",
+  "main.css": "/crunch/static/css/main.fed51afc.chunk.css",
+  "main.js": "/crunch/static/js/main.2ccbfd62.chunk.js",
+  "main.js.map": "/crunch/static/js/main.2ccbfd62.chunk.js.map",
   "static/js/1.bade843e.chunk.js": "/crunch/static/js/1.bade843e.chunk.js",
   "static/js/1.bade843e.chunk.js.map": "/crunch/static/js/1.bade843e.chunk.js.map",
   "runtime~main.js": "/crunch/static/js/runtime~main.b1d1fb52.js",
   "runtime~main.js.map": "/crunch/static/js/runtime~main.b1d1fb52.js.map",
   "static/media/App.css": "/crunch/static/media/back.3dd97e2e.jpg",
-  "static/css/main.eb05c64c.chunk.css.map": "/crunch/static/css/main.eb05c64c.chunk.css.map",
+  "static/css/main.fed51afc.chunk.css.map": "/crunch/static/css/main.fed51afc.chunk.css.map",
   "index.html": "/crunch/index.html",
-  "precache-manifest.617b7d734e9a54f8ed04e59c8c2435c6.js": "/crunch/precache-manifest.617b7d734e9a54f8ed04e59c8c2435c6.js",
+  "precache-manifest.acdaeba2f1f79628bbfb045eec0f194d.js": "/crunch/precache-manifest.acdaeba2f1f79628bbfb045eec0f194d.js",
   "service-worker.js": "/crunch/service-worker.js"
 }
