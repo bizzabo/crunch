@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import { getAttendeePhotoAlbum } from "./api";
+const Sound = require('react-sound').default;
+
+
+const sounds = ['https://s3.amazonaws.com/bizzathon-2018-audio/1.mp3',
+    'https://s3.amazonaws.com/bizzathon-2018-audio/2.mp3', 'https://s3.amazonaws.com/bizzathon-2018-audio/3.mp3', 'https://s3.amazonaws.com/bizzathon-2018-audio/4.mp3'];
 
 class App extends Component {
 
-    state = {};
+    state = {
+        sound: Sound.status.STOPPED
+    };
 
     async componentDidMount() {
         const eventId = new URL(window.location.href).searchParams.get('event');
@@ -16,7 +23,14 @@ class App extends Component {
             attendeeName: `${response.attendee.firstName} ${response.attendee.lastName}`,
             profileImageSrc: response.attendee.thumbnailUrl
         });
+
+
     }
+
+    playSound = () => {
+        console.log('@@@ aaa');
+        this.setState({sound: Sound.status.PLAYING});
+    };
 
     render() {
         const { attendeeName='YOU',
@@ -36,8 +50,9 @@ class App extends Component {
                 </h3>
             </header>
             <section className="gallery">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="http://alawteam.com/fb.png" alt="share" className="share-button" /></a>
                 <h2>YOU LOOK AMAZING!</h2>
-                {images && images.map((image, i) => <img className="attendee-image" src={image} key={i} alt="Your Photos" /> )}
+                {images && images.map((image, i) => <img onClick={this.playSound} className="attendee-image" src={image} key={i} alt="Your Photos" /> )}
             </section>
 
             <section className="sponsors">
@@ -58,7 +73,7 @@ class App extends Component {
                 <h2>USE PHOTOVENT FREE FOR YOUR NEXT EVENT</h2>
                 <button>TRY NOW</button>
             </section>
-
+            <Sound url={sounds[0]} playStatus={this.state.sound} />
           </div>
         );
     }

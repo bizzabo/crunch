@@ -5,7 +5,8 @@
   "homepage": "http://bizzabo.github.io/crunch",
   "dependencies": {
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-sound": "^1.2.0"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
