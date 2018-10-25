@@ -4,35 +4,40 @@ import { getAttendeePhotoAlbum } from "./api";
 
 class App extends Component {
 
+    state = {};
+
     async componentDidMount() {
         const eventId = new URL(window.location.href).searchParams.get('event');
         const userId = new URL(window.location.href).searchParams.get('user');
         const response = await getAttendeePhotoAlbum(eventId, userId);
-        const body = response.body;
         this.setState({
-            images: body.attendeePhotos,
-            eventName: body.event.name,
-            attendeeName: `${body.attendee.firstName} ${body.attendee.lastName}`,
-            profileImageSrc: body.attendee.thumbnailUrl
+            images: response.attendeePhotos,
+            eventName: response.event.name,
+            attendeeName: `${response.attendee.firstName} ${response.attendee.lastName}`,
+            profileImageSrc: response.attendee.thumbnailUrl
         });
     }
 
     render() {
-        const { attendeeName, profileImageSrc, eventName, images } = this.state;
+        const { attendeeName='YOU',
+                profileImageSrc="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg",
+                eventName='the thing',
+                images=[]
+        } = this.state;
         return (
-          <div className="App">
+          <div className="App">cj07340FSD
             <header className="purple-section">
-                <img src={profileImageSrc || "https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg"} alt="Barak Mazal Tov!" />
+                <img src={profileImageSrc} alt="Barak Mazal Tov!" />
                 <h1>
-                    HI {attendeeName || 'YOU'},
+                    HI {attendeeName},
                 </h1>
                 <h3>
-                    It was great seeing you at {eventName || 'the thing'}
+                    It was great seeing you at {eventName}
                 </h3>
             </header>
             <section className="gallery">
                 <h2>YOU LOOK AMAZING!</h2>
-                {images && images.map((image, i) => <img className="attendee-image" src={image.externalImageId} key={i} alt="Your Photos" /> )}
+                {images && images.map((image, i) => <img className="attendee-image" src={image} key={i} alt="Your Photos" /> )}
             </section>
 
             <section className="sponsors">
