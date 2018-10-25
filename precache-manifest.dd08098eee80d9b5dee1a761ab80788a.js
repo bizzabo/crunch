@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/crunch/static/js/runtime~main.b1d1fb52.js"
   },
   {
-    "revision": "2ccbfd6243d293ccec4a",
-    "url": "/crunch/static/js/main.2ccbfd62.chunk.js"
+    "revision": "8f73bfb3b5068bc02ce3",
+    "url": "/crunch/static/js/main.8f73bfb3.chunk.js"
   },
   {
     "revision": "bade843e6148981829b6",
     "url": "/crunch/static/js/1.bade843e.chunk.js"
   },
   {
-    "revision": "2ccbfd6243d293ccec4a",
-    "url": "/crunch/static/css/main.fed51afc.chunk.css"
+    "revision": "8f73bfb3b5068bc02ce3",
+    "url": "/crunch/static/css/main.341395da.chunk.css"
   },
   {
-    "revision": "0728dab442a2547869cc57ede0c0d083",
+    "revision": "f9f4b2ae6b149548f2d55a4b87698d0a",
     "url": "/crunch/index.html"
   }
 ];
