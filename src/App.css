@@ -133,3 +133,15 @@ button {
     height: 50px;
   }
 }
+
+.dudu{
+  position: fixed;
+  bottom: 0;
+  left: 20%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(/static/media/dudu.1c5c0150.jpg);
+  object-fit: cover;
+  width: 100%;
+  height: 80vh;
+}

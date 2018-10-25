@@ -17,7 +17,8 @@ class App extends Component {
 
     state = {
         soundStatus: Sound.status.STOPPED,
-        selectedSound: getSound()
+        selectedSound: getSound(),
+        showDudu: false
     };
 
     async componentDidMount() {
@@ -37,6 +38,13 @@ class App extends Component {
             soundStatus: Sound.status.PLAYING,
             selectedSound: getSound()
         });
+    };
+
+    showDudu = () => {
+        this.setState({showDudu: true});
+        setTimeout(() => {
+                this.setState({showDudu: false});
+        }, 200);
     };
 
     render() {
@@ -78,9 +86,10 @@ class App extends Component {
 
             <section className="next-event">
                 <h2>USE PHOTOVENT FREE FOR YOUR NEXT EVENT</h2>
-                <button>TRY NOW</button>
+                <button onClick={this.showDudu}>TRY NOW</button>
             </section>
             <Sound url={this.state.selectedSound} playStatus={this.state.soundStatus} />
+              {this.state.showDudu && <div className="dudu"></div>}
           </div>
         );
     }
