@@ -20,12 +20,12 @@ class App extends Component {
 
     render() {
         const { attendeeName='YOU',
-                profileImageSrc="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg",
+                profileImageSrc="https://images.vexels.com/media/users/3/145908/preview2/52eabf633ca6414e60a7677b0b917d92-male-avatar-maker.jpg",
                 eventName='the thing',
                 images=[]
         } = this.state;
         return (
-          <div className="App">cj07340FSD
+          <div className="App">
             <header className="purple-section">
                 <img src={profileImageSrc} alt="Barak Mazal Tov!" />
                 <h1>
@@ -55,7 +55,7 @@ class App extends Component {
             </section>
 
             <section className="next-event">
-                <h2>USE PHOTOEVENT FREE FOR YOUR NEXT EVENT</h2>
+                <h2>USE PHOTOVENT FREE FOR YOUR NEXT EVENT</h2>
                 <button>TRY NOW</button>
             </section>
 
